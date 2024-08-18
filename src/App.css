@@ -1,19 +1,50 @@
+/* Ensure the root element spans the full viewport */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the root container uses the full width of the viewport */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main content area should start below the fixed menu */
+main {
+  padding-top: 4rem; /* Adjust this to match the height of your MenubarComponent */
+  flex-grow: 1; /* Ensure the main content fills the remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content both horizontally and vertically */
+  min-height: calc(100vh - 4rem); /* Ensures content fills the viewport minus the menu */
   text-align: center;
 }
 
+/* Container for inner content */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Optional: Limit max width for larger screens */
+  margin: 0 2rem;
+}
+
+/* Additional styling */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
