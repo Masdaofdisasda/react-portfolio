@@ -17,7 +17,6 @@ html, body, #root {
 
 /* Main content area should start below the fixed menu */
 main {
-  padding-top: 4rem; /* Adjust this to match the height of your MenubarComponent */
   flex-grow: 1; /* Ensure the main content fills the remaining space */
   display: flex;
   justify-content: center;
@@ -29,7 +28,7 @@ main {
 /* Container for inner content */
 .container {
   width: 100%;
-  max-width: 1200px; /* Optional: Limit max width for larger screens */
+  max-width: 1200px;
   margin: 0 2rem;
 }
 

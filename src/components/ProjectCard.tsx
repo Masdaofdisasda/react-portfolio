@@ -1,6 +1,12 @@
 // components/ProjectCard.tsx
 import { Link } from 'react-router-dom';
 import { Project } from '../assets/projects.tsx';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card.tsx';
+import { Label } from '@radix-ui/react-label';
+import { Input } from './ui/input.tsx';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select.tsx';
+import { Button } from './ui/button.tsx';
+import Flex from './Flex.tsx';
 
 interface ProjectCardProps {
   project: Project;
@@ -8,46 +14,26 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="p-4 border rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold">{project.title}</h2>
-      <p className="mt-2">{project.description}</p>
-      <div className="mt-4">
-        <img
-          src={project.imageUrl}
-          alt={project.title}
-          className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <div className="mt-4 flex space-x-4">
-        {project.youtubeUrl && (
-          <a
-            href={project.youtubeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
-            Watch Video
-          </a>
-        )}
-        {project.githubUrl && (
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
-            View Source
-          </a>
-        )}
-        <Link
-          to={`/projects/${project.id}`}
-          className="text-blue-600 hover:underline"
-        >
-          View Details
-        </Link>
-      </div>
-    </div>
-  );
+  <Card style={{ maxWidth: '350px' }} className="object-cover transition-transform duration-500 hover:scale-105">
+    <CardHeader>
+      <CardTitle>{project.title}</CardTitle>
+      <CardDescription >{project.description}</CardDescription>
+    </CardHeader>
+    <CardContent>
+      <img
+        src={project.imageUrl}
+        alt={project.title}
+        className="w-full h-48"
+      />
+    </CardContent>
+    <CardFooter className="flex justify-between">
+      <Flex justify="flex-start">
+        <Button variant="outline">Code</Button>
+        <Button variant="outline">Video</Button>
+      </Flex>
+      <Button className={"bg-slate-800"}>View More</Button>
+    </CardFooter>
+  </Card>
+  )
 }
-
 export default ProjectCard;
