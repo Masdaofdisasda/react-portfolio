@@ -14,7 +14,7 @@ export const projects: Project[] = [
     title: 'Greed',
     description: 'Ready for a treasure hunt with a twist? Introducing Greed - a 3D game where your goal is to collect gold and emerge victorious. But beware, the more gold you snatch, the slower you\'ll become! Developed by yours truly and a fellow adventurer, our game earned a prestigious spot in the TU Wien Computer Graphics',
     imageUrl: ['./images/greed1.jpg', './images/greed2.jpg', './images/greed3.jpg'],
-    youtubeUrl: 'https://www.youtube.com/embed/example',
+    youtubeUrl: 'https://www.youtube.com/embed/l_ucd9Kc4S4?si=O2QKUmwCvj-NEuSx',
     githubUrl: 'https://github.com/user/project1',
   },
   {

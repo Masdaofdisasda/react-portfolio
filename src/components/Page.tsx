@@ -8,7 +8,8 @@ type LayoutProps = {
 
 function Page(props: LayoutProps) {
   return (
-    <Flex direction={'column'} style={{ maxWidth: "75%" }} gap={4}>
+    <Flex direction={'column'}
+          className="xl:w-3/4 pb-24 gap-4" gap={4}>
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
         {props.title}
       </h1>

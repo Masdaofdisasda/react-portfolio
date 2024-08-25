@@ -17,7 +17,7 @@ function ProjectDetail() {
 
   return (
     <Page title={project.title}>
-      <Flex direction="column" gap={3}>
+      <Flex direction="column" gap={4}>
         <Flex className={"w-full"} justify={'center'}>
           <p className="leading-7 text-start" style={{ maxWidth: '700px' }}>
             {project.description}
@@ -27,13 +27,13 @@ function ProjectDetail() {
           project.imageUrl && (
             <Flex>
               <Carousel style={{ maxWidth: '700px' }} >
-                <CarouselContent>
+                <CarouselContent className={'-ml-2 md:-ml-4'}>
                   {project.imageUrl.map((imageUri, index) => (
-                    <CarouselItem key={index}>
+                    <CarouselItem key={index} className="md:basis-1 lg:basis-7/12">
                       <img
                         src={'../'+imageUri}
                         alt={project.title}
-                        className="w-full h-48 object-cover rounded-lg"
+                        className="w-full md:h-48 lg:h-96 object-cover rounded-lg"
                       />
                     </CarouselItem>
                   ))}
@@ -44,6 +44,28 @@ function ProjectDetail() {
             </Flex>
           )
         }
+        {project.youtubeUrl && (
+          <Flex justify="center">
+            <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
+              <iframe
+                src={project.youtubeUrl}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+              ></iframe>
+            </div>
+          </Flex>
+        )}
+
       </Flex>
 
     </Page>

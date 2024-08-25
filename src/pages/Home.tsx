@@ -1,19 +1,29 @@
-import { Card } from '../components/ui/card.tsx';
-import { Button } from '../components/ui/button.tsx';
+
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaSpotify } from 'react-icons/fa';
+import Page from '../components/Page';
+import Flex from '../components/Flex.tsx';
 
 
 function Home() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">Welcome to My Portfolio</h1>
-      <p className="mt-4">This is the home page. You can navigate to different sections using the links above.</p>
-      <Card className="mt-6 p-4">
-        <h2 className="text-xl font-semibold">Featured Project</h2>
-        <p className="mt-2">Check out one of my coolest projects!</p>
-        <Button className="mt-4">View Project</Button>
-      </Card>
-    </div>
-  );
+    <Page title="Welcome">
+      <Flex justify="center" gap={3}>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin className="w-6 h-6 text-slate-800 hover:text-blue-700" />
+        </a>
+        <a href="https://github.com/yourhandle" target="_blank" rel="noopener noreferrer">
+          <FaGithub className="w-6 h-6 text-slate-800 hover:text-gray-600" />
+        </a>
+        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer">
+          <FaInstagram className="w-6 h-6 text-slate-800 hover:text-pink-600" />
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
+          <FaSpotify className="w-6 h-6 text-slate-800 hover:text-green-500" />
+        </a>
+      </Flex>
+    </Page>
+  )
+    ;
 }
 
 export default Home;
