@@ -3,13 +3,13 @@ import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaSpotify } from 'react-i
 import Page from '../components/Page';
 import Flex from '../components/Flex.tsx';
 import Scene from '../components/Scene.tsx';
+import Bananas from '../components/Banana.tsx';
 
 
 function Home() {
   return (
-    <Page title="Welcome">
       <div className="relative w-full h-screen">
-        <Scene />
+        <Bananas/>
         <Flex justify="center" gap={3} className={"absolute top-0"}>
           <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="w-6 h-6 text-slate-800 hover:text-blue-700" />
@@ -25,7 +25,6 @@ function Home() {
           </a>
         </Flex>
       </div>
-    </Page>
   )
     ;
 }
