@@ -5,6 +5,8 @@ import Resume from './pages/Resume';
 import './App.css';
 import Layout from './components/Layout.tsx';
 import ProjectDetail from './pages/ProjectDetailView.tsx';
+import About from './pages/About.tsx';
+import Contact from './pages/Contact.tsx';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Layout>
     </Router>
