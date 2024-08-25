@@ -21,7 +21,7 @@ main {
   flex-grow: 1; /* Ensure the main content fills the remaining space */
   display: flex;
   justify-content: center;
-  align-items: center; /* Center content both horizontally and vertically */
+  align-items: start; /* Center content both horizontally and vertically */
   min-height: calc(100vh - 4rem); /* Ensures content fills the viewport minus the menu */
   text-align: center;
 }

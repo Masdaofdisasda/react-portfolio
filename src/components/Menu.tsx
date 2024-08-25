@@ -1,35 +1,46 @@
-import { Button } from './ui/button.tsx';
-import { Link } from 'react-router-dom';
+
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle,
+
+} from './ui/navigation-menu.tsx';
+import Flex from './Flex.tsx';
 
 export function MenubarComponent() {
 
   return (
+    <Flex className={"justify-between"}>
 
-    <header className="w-full fixed top-0 left-0 bg-white shadow-md z-50">
-      <div className="container flex justify-between items-center">
-        <nav className="flex">
-          <Link to="/">
-            <Button variant="link" className="text-blue-600 hover:text-blue-800">
-              Home
-            </Button>
-          </Link>
-          <Link to="/projects">
-            <Button variant="link" className="text-blue-600 hover:text-blue-800">
-              Projects
-            </Button>
-          </Link>
-          <Link to="/resume">
-            <Button variant="link" className="text-blue-600 hover:text-blue-800">
-              Resume
-            </Button>
-          </Link>
-          <Link to="/contact">
-            <Button variant="link" className="text-blue-600 hover:text-blue-800">
-              Contact
-            </Button>
-          </Link>
-        </nav>
-      </div>
-    </header>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+                <NavigationMenuLink href={"/"} className={navigationMenuTriggerStyle()}>
+                  Home
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+                <NavigationMenuLink href={"/projects"} className={navigationMenuTriggerStyle()}>
+                  Projects
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+                <NavigationMenuLink href={"/resume"} className={navigationMenuTriggerStyle()}>
+                  Resume
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+                <NavigationMenuLink href={"/contact"} className={navigationMenuTriggerStyle()}>
+                  Contact
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+                <NavigationMenuLink href={"/about"} className={navigationMenuTriggerStyle()}>
+                  About
+                </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+</Flex>
   );
 }
