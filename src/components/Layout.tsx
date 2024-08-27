@@ -9,7 +9,7 @@ export function Layout( props : LayoutProps ) {
   return (
     <Fragment>
       <MenubarComponent />
-      <main className={"mt-24"}>
+      <main >
         {props.children}
       </main></Fragment>
   );

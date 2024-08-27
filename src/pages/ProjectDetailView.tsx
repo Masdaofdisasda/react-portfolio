@@ -17,7 +17,8 @@ function ProjectDetail() {
 
   return (
     <Page title={project.title}>
-      <Flex direction="column" gap={4}>
+      <Flex justify="center">
+        <Flex direction="column" className={"lg:w-3/4 xl:w-1/2 mx-8"} gap={3}>
         <Flex className={"w-full"} justify={'center'}>
           <p className="leading-7 text-start" style={{ maxWidth: '700px' }}>
             {project.description}
@@ -66,6 +67,7 @@ function ProjectDetail() {
           </Flex>
         )}
 
+      </Flex>
       </Flex>
 
     </Page>

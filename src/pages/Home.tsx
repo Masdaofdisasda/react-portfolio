@@ -1,16 +1,20 @@
 
-import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaSpotify } from 'react-icons/fa';
-import Page from '../components/Page';
+import { FaLinkedin, FaGithub, FaInstagram, FaSpotify } from 'react-icons/fa';
 import Flex from '../components/Flex.tsx';
-import Scene from '../components/Scene.tsx';
 import Bananas from '../components/Banana.tsx';
 
 
 function Home() {
   return (
-      <div className="relative w-full h-screen">
-        <Bananas/>
-        <Flex justify="center" gap={3} className={"absolute top-0"}>
+    <div className="relative w-full h-screen">
+      <Bananas />
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+
+        <h1 className=" text-5xl font-extrabold lg:text-6xl mb-12">
+          Welcome
+        </h1>
+        <Flex justify="center" gap={4}>
           <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="w-6 h-6 text-slate-800 hover:text-blue-700" />
           </a>
@@ -25,6 +29,7 @@ function Home() {
           </a>
         </Flex>
       </div>
+    </div>
   )
     ;
 }

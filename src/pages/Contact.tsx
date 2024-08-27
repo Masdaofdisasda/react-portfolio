@@ -30,13 +30,15 @@ function Contact() {
   return (
     <Page title={"Contact"}>
 
+      <Flex justify="center">
+      <Flex direction="column" className={"lg:w-3/4 xl:w-1/2 mx-8"}>
 
       <h2
         className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Get in touch
       </h2>
-      <Flex justify={'center'}>
-        <Flex direction={'column'}>
+      <Flex justify={'center'} className={"w-full"}>
+        <Flex direction={'column'} className={"w-full"}>
           <Input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
           <Textarea placeholder="Type your message here." value={message} onChange={(e) => setMessage(e.target.value)}
                     cols={5} />
@@ -69,6 +71,8 @@ function Contact() {
         <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
           <FaSpotify className="w-6 h-6 text-slate-800 hover:text-green-500" />
         </a>
+      </Flex>
+    </Flex>
       </Flex>
     </Page>
   )
