@@ -2,7 +2,7 @@
 import {
   NavigationMenu, NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle,
+  NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle,
 
 } from './ui/navigation-menu.tsx';
 import Flex from './Flex.tsx';
@@ -13,6 +13,7 @@ import { Fragment } from 'react';
 
 export function MenubarComponent() {
   const linkStyle = cn(navigationMenuTriggerStyle(),"bg-slate-800 bg-opacity-0 hover:opacity-100 text-slate-100");
+  const linkStyleMobile = cn(navigationMenuTriggerStyle(),"bg-slate-800 text-slate-100");
 
   const options = (
     <><NavigationMenuItem>
@@ -37,6 +38,29 @@ export function MenubarComponent() {
       </Link>
     </NavigationMenuItem></>
   )
+  const optionsMobile = (
+    <><NavigationMenuItem>
+      <Link to="/" className={linkStyleMobile}>
+        Home
+      </Link>
+    </NavigationMenuItem><NavigationMenuItem>
+      <Link to="/projects" className={linkStyleMobile}>
+        Projects
+      </Link>
+    </NavigationMenuItem><NavigationMenuItem>
+      <Link to="/resume" className={linkStyleMobile}>
+        Resume
+      </Link>
+    </NavigationMenuItem><NavigationMenuItem>
+      <Link to="/contact" className={linkStyleMobile}>
+        Contact
+      </Link>
+    </NavigationMenuItem><NavigationMenuItem>
+      <Link to="/about" className={linkStyleMobile}>
+        About
+      </Link>
+    </NavigationMenuItem></>
+  )
 
   return (
     <Fragment>
@@ -50,7 +74,7 @@ export function MenubarComponent() {
           </NavigationMenuList>
         </NavigationMenu>
       </Flex>
-  <div className={"justify-start w-full bg-slate-800 p-4 fixed z-50 md:hidden"}>
+  <div className={"justify-start w-full bg-slate-800/50 p-4 fixed z-50 backdrop-blur-xl backdrop-filter shadow-lg md:hidden"}>
     <NavigationMenu >
       <NavigationMenuList>
         <NavigationMenuItem>
@@ -60,7 +84,7 @@ export function MenubarComponent() {
           <NavigationMenuContent>
             <NavigationMenuList >
               <Flex direction="column" justify="space-evenly">
-                {options}
+                {optionsMobile}
               </Flex>
             </NavigationMenuList>
           </NavigationMenuContent>

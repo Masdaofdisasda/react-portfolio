@@ -3,6 +3,8 @@ import { projects } from '../assets/projects.tsx';
 import Page from '../components/Page.tsx';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel.tsx';
 import Flex from '../components/Flex.tsx';
+import { Button } from '../components/ui/button.tsx';
+import { FaGithub } from 'react-icons/fa';
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -66,8 +68,22 @@ function ProjectDetail() {
             </div>
           </Flex>
         )}
+          {
+            project.githubUrl && (
+              <Flex justify="center">
+                <Button
+                  variant="outline"
+                  className="flex items-center space-x-2"
+                >
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="w-6 h-6 text-slate-800 hover:text-gray-600" />
+                  </a>
+                </Button>
+              </Flex>
+            )
+          }
 
-      </Flex>
+        </Flex>
       </Flex>
 
     </Page>

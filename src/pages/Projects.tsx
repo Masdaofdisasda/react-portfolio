@@ -8,9 +8,12 @@ function Projects() {
     <Page title="Projects">
 
   <Flex gap={4} className="mt-4" wrap="wrap" justify={'center'}>
-    {projects.map((project) => (
-      <ProjectCard key={project.id} project={project} />
-    ))}
+    {projects
+      .sort((a, b) => a.title.localeCompare(b.title))
+      .map((project) => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
+
   </Flex>
     </Page>
   );
