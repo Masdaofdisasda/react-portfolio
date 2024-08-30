@@ -63,9 +63,9 @@ const Model: React.FC<BananaProps> = ({ index, z, speed, path }) => {
 };
 
 const modelPaths = [
-  '../images/dragon.glb',
-  '../images/teapot.glb',
-  '../images/bunny.glb',
+  '../public/dragon.glb',
+  '../public/teapot.glb',
+  '../public/bunny.glb',
 ];
 
 function FloatingModels({
