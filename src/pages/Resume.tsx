@@ -2,7 +2,7 @@ import Page from '../components/Page.tsx';
 import Flex from '../components/Flex.tsx';
 
 import pdf from '../../images/Resume.pdf';
-import { Button, buttonVariants } from '../components/ui/button.tsx';
+import { buttonVariants } from '../components/ui/button.tsx';
 
 function Resume() {
   return (

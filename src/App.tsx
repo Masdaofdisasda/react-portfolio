@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme] = useState<Theme>('light');
 
   return (
     <ThemeProvider defaultTheme={theme} storageKey="vite-ui-theme">

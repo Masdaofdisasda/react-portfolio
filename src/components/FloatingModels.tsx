@@ -2,18 +2,18 @@ import * as THREE from 'three'
 import React, { useRef, useState } from 'react'
 import { Canvas, useThree, useFrame, RootState } from '@react-three/fiber';
 // https://github.com/pmndrs/drei
-import { useGLTF, Detailed, Environment, NormalTexture } from '@react-three/drei';
+import { useGLTF, Detailed, Environment } from '@react-three/drei';
 // https://github.com/pmndrs/react-postprocessing
 // https://github.com/vanruesc/postprocessing
 import {
   EffectComposer,
   DepthOfField,
   ToneMapping,
-  SSAO,
   BrightnessContrast,
   Bloom,
 } from '@react-three/postprocessing';
 import { KernelSize, Resolution } from 'postprocessing'
+import { Mesh } from 'three';
 
 interface BananaProps {
   index: number;
@@ -53,10 +53,11 @@ const Model: React.FC<BananaProps> = ({ index, z, speed, path }) => {
   });
 
   return (
+    // @ts-ignore
     <Detailed ref={ref} distances={[0, 65, 80]}>
-      <mesh geometry={nodes.high.geometry} material={materials["Material.001"]}   />
-      <mesh geometry={nodes.mid.geometry} material={materials["Material.001"]}  />
-      <mesh geometry={nodes.low.geometry} material={materials["Material.001"]}  />
+      <mesh geometry={(nodes.high as Mesh).geometry} material={materials['Material.001']} />
+      <mesh geometry={(nodes.mid as Mesh).geometry} material={materials['Material.001']} />
+      <mesh geometry={(nodes.low as Mesh).geometry} material={materials['Material.001']} />
     </Detailed>
   );
 };
@@ -68,10 +69,10 @@ const modelPaths = [
 ];
 
 function FloatingModels({
-                   speed = 1,
-                   count = 80,
-                   depth = 80,
-                   easing = (x: number) => Math.sqrt(1 - Math.pow(x - 1, 2)),
+                          speed = 1,
+                          count = 80,
+                          depth = 80,
+                          easing = (x: number) => Math.sqrt(1 - Math.pow(x - 1, 2)),
                  }) {
   return (
     <Canvas
