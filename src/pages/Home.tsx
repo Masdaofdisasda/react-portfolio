@@ -1,17 +1,17 @@
 
 import { FaLinkedin, FaGithub, FaInstagram, FaSpotify } from 'react-icons/fa';
 import Flex from '../components/Flex.tsx';
-import Bananas from '../components/Banana.tsx';
+import FloatingModels from '../components/FloatingModels.tsx';
 
 
 function Home() {
   return (
     <div className="relative w-full h-screen">
-      <Bananas />
+      <FloatingModels />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center">
 
-        <h1 className=" text-5xl font-extrabold lg:text-6xl mb-12">
+        <h1 className="text-5xl font-extrabold lg:text-6xl mb-12 mix-blend-difference invert backdrop-blur-sm backdrop-opacity-0">
           Welcome
         </h1>
         <Flex justify="center" gap={4}>

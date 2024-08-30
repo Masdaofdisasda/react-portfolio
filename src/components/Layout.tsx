@@ -9,7 +9,7 @@ export function Layout( props : LayoutProps ) {
   return (
     <Fragment>
       <MenubarComponent />
-      <main >
+      <main className={'.dark'}>
         {props.children}
       </main></Fragment>
   );

@@ -12,7 +12,7 @@ import { Fragment } from 'react';
 
 
 export function MenubarComponent() {
-  const linkStyle = cn(navigationMenuTriggerStyle(),"bg-slate-800 text-slate-100");
+  const linkStyle = cn(navigationMenuTriggerStyle(),"bg-slate-800 bg-opacity-0 hover:opacity-100 text-slate-100");
 
   const options = (
     <><NavigationMenuItem>
@@ -40,7 +40,10 @@ export function MenubarComponent() {
 
   return (
     <Fragment>
-      <Flex justify="center" className={"w-full bg-slate-800 py-4 fixed z-50"}>
+      <Flex
+        justify="center"
+        className="w-full bg-slate-800/50 py-4 fixed z-50 backdrop-blur-xl backdrop-filter shadow-lg"
+      >
         <NavigationMenu >
           <NavigationMenuList>
             {options}
