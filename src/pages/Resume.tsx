@@ -1,7 +1,7 @@
 import Page from '../components/Page.tsx';
 import Flex from '../components/Flex.tsx';
 
-import pdf from '../../images/Resume.pdf';
+import pdf from '/images/Resume.pdf';
 import { buttonVariants } from '../components/ui/button.tsx';
 
 function Resume() {

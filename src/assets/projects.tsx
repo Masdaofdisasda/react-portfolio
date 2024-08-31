@@ -34,7 +34,7 @@ export const projects: Project[] = [
       The game level was intricately modeled using Maya3D, ensuring a detailed and engaging environment for players. Greed not only showcases my technical skills in modern graphics programming but also my ability to integrate complex systems into a cohesive and exciting gameplay experience.
 
     </div>,
-    imageUrl: ['./images/greed1.jpg', './images/greed2.jpg', './images/greed3.jpg'],
+    imageUrl: ['/images/greed1.jpg', '/images/greed2.jpg', '/images/greed3.jpg'],
     youtubeUrl: 'https://www.youtube.com/embed/l_ucd9Kc4S4?si=O2QKUmwCvj-NEuSx',
     githubUrl: 'https://github.com/Masdaofdisasda/cgue22-greed',
   },
@@ -62,7 +62,7 @@ export const projects: Project[] = [
 
       <p>Neck Break Velocity not only demonstrates my proficiency in C# and Unity but also showcases my ability to create engaging and visually appealing gameplay experiences. The game combines humor, chaos, and competition, making it a unique addition to my portfolio.</p>
     </div>,
-    imageUrl: ['./images/neckbreakVelocity1.png', './images/neckbreakVelocity2.png'],
+    imageUrl: ['/images/neckbreakVelocity1.png', '/images/neckbreakVelocity2.png'],
   },
   {
     id: 3,
@@ -188,7 +188,7 @@ export const projects: Project[] = [
       Static Website Hosting: The site is hosted as a static website, ensuring fast load times and reliability. There’s no backend, keeping the architecture simple and focused on content delivery.
       This portfolio website not only serves as a display of my work but also as a testament to my ability to build and deploy modern web applications. It’s a clean, responsive, and efficient site that highlights both my technical and creative skills.
     </div>,
-    imageUrl: ['./images/portfolio.png'],
+    imageUrl: ['/images/portfolio.png'],
     githubUrl: 'https://github.com/user/project2',
   },
   {
