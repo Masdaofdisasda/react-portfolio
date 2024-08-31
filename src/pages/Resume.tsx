@@ -7,10 +7,18 @@ import { buttonVariants } from '../components/ui/button.tsx';
 function Resume() {
   return (
     <Page title="Resume">
-      <Flex direction="column" gap={3} className="items-center">
-        <Flex className="w-full xl:w-2/3 mx-auto">
-          <object data={pdf} type="application/pdf" width="100%" height="600px">
-            <div>Could not display resume.</div>
+      <Flex direction="column" gap={3} className="items-center h-screen">
+        <Flex className="w-full xl:w-2/3 mx-auto  h-full">
+          <object data={pdf} type="application/pdf" className="w-full h-full">
+            <Flex direction={'column'} gap={3}>Could not display resume.
+
+              <a
+                href={pdf}
+                download="Koeppl David Resume.pdf"
+                className={buttonVariants()}
+              >
+                Click here to download it.
+              </a></Flex>
           </object>
         </Flex>
 
