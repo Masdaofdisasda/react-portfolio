@@ -8,7 +8,6 @@ function Resume() {
   return (
     <Page title="Resume">
       <Flex direction="column" gap={3} className="items-center">
-
         <Flex className="w-full xl:w-2/3 mx-auto">
           <object data={pdf} type="application/pdf" width="100%" height="600px">
             <div>Could not display resume.</div>
@@ -26,7 +25,6 @@ function Resume() {
         </Flex>
       </Flex>
     </Page>
-
   );
 }
 

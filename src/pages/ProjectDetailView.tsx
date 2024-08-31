@@ -1,7 +1,13 @@
 import { useParams } from 'react-router-dom';
 import { projects } from '../assets/projects.tsx';
 import Page from '../components/Page.tsx';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel.tsx';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '../components/ui/carousel.tsx';
 import Flex from '../components/Flex.tsx';
 import { Button } from '../components/ui/button.tsx';
 import { FaGithub } from 'react-icons/fa';
@@ -9,32 +15,34 @@ import { FaGithub } from 'react-icons/fa';
 function ProjectDetail() {
   const { id } = useParams();
   if (!id) {
-    return <Page title={"Project not found"}></Page>
+    return <Page title={'Project not found'}></Page>;
   }
   const project = projects.find((project) => project.id === parseInt(id));
 
   if (!project) {
-    return <Page title={"Project not found"}></Page>
+    return <Page title={'Project not found'}></Page>;
   }
 
   return (
     <Page title={project.title}>
       <Flex justify="center">
-        <Flex direction="column" className={"lg:w-3/4 xl:w-1/2 mx-8"} gap={3}>
-        <Flex className={"w-full"} justify={'center'}>
-          <p className="leading-7 text-start" style={{ maxWidth: '700px' }}>
-            {project.description}
-          </p>
-        </Flex>
-        {
-          project.imageUrl && (
+        <Flex direction="column" className={'lg:w-3/4 xl:w-1/2 mx-8'} gap={3}>
+          <Flex className={'w-full'} justify={'center'}>
+            <p className="leading-7 text-start" style={{ maxWidth: '700px' }}>
+              {project.description}
+            </p>
+          </Flex>
+          {project.imageUrl && (
             <Flex>
-              <Carousel style={{ maxWidth: '700px' }} >
+              <Carousel style={{ maxWidth: '700px' }}>
                 <CarouselContent className={'-ml-2 md:-ml-4'}>
                   {project.imageUrl.map((imageUri, index) => (
-                    <CarouselItem key={index} className="md:basis-1 lg:basis-7/12">
+                    <CarouselItem
+                      key={index}
+                      className="md:basis-1 lg:basis-7/12"
+                    >
                       <img
-                        src={'../'+imageUri}
+                        src={'../' + imageUri}
                         alt={project.title}
                         className="w-full md:h-48 lg:h-96 object-cover rounded-lg"
                       />
@@ -45,47 +53,49 @@ function ProjectDetail() {
                 <CarouselNext />
               </Carousel>
             </Flex>
-          )
-        }
-        {project.youtubeUrl && (
-          <Flex justify="center">
-            <div style={{ position: 'relative', width: '100%', paddingBottom: '56.25%' }}>
-              <iframe
-                src={project.youtubeUrl}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
+          )}
+          {project.youtubeUrl && (
+            <Flex justify="center">
+              <div
                 style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
+                  position: 'relative',
                   width: '100%',
-                  height: '100%',
+                  paddingBottom: '56.25%',
                 }}
-              ></iframe>
-            </div>
-          </Flex>
-        )}
-          {
-            project.githubUrl && (
-              <Flex justify="center">
-                <Button
-                  variant="outline"
-                  className="flex items-center space-x-2"
+              >
+                <iframe
+                  src={project.youtubeUrl}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                ></iframe>
+              </div>
+            </Flex>
+          )}
+          {project.githubUrl && (
+            <Flex justify="center">
+              <Button variant="outline" className="flex items-center space-x-2">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <FaGithub className="w-6 h-6 text-slate-800 hover:text-gray-600" />
-                  </a>
-                </Button>
-              </Flex>
-            )
-          }
-
+                  <FaGithub className="w-6 h-6 text-slate-800 hover:text-gray-600" />
+                </a>
+              </Button>
+            </Flex>
+          )}
         </Flex>
       </Flex>
-
     </Page>
   );
 }

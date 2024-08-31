@@ -11,7 +11,6 @@ import { Theme, ThemeProvider } from './components/ThemeProvider.tsx';
 import { useState } from 'react';
 
 function App() {
-
   const [theme] = useState<Theme>('light');
 
   return (

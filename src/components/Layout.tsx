@@ -3,15 +3,14 @@ import { Fragment, ReactNode } from 'react';
 
 type LayoutProps = {
   children?: ReactNode;
-}
+};
 
-export function Layout( props : LayoutProps ) {
+export function Layout(props: LayoutProps) {
   return (
     <Fragment>
       <MenubarComponent />
-      <main className={'.dark'}>
-        {props.children}
-      </main></Fragment>
+      <main className={'.dark'}>{props.children}</main>
+    </Fragment>
   );
 }
 

@@ -3,10 +3,16 @@ import { CSSProperties, ReactNode } from 'react';
 interface FlexProps {
   children: ReactNode;
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
-  justify?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
+  justify?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
+    | 'space-evenly';
   align?: 'stretch' | 'flex-start' | 'flex-end' | 'center' | 'baseline';
   wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
-  gap?: 1 | 2 | 3  | 4 | 5;
+  gap?: 1 | 2 | 3 | 4 | 5;
   style?: CSSProperties;
   className?: string; // Optional, in case you want to pass custom classes
 }
@@ -19,16 +25,16 @@ const gapValues = {
 };
 
 function Flex({
-                children,
-                direction = 'row',
-                justify = 'flex-start',
-                align = 'stretch',
-                wrap = 'nowrap',
-                gap = 1,
-                style = {},
-                className = '',
-                ...props
-              }: FlexProps): ReactNode {
+  children,
+  direction = 'row',
+  justify = 'flex-start',
+  align = 'stretch',
+  wrap = 'nowrap',
+  gap = 1,
+  style = {},
+  className = '',
+  ...props
+}: FlexProps): ReactNode {
   return (
     <div
       style={{

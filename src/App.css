@@ -1,5 +1,7 @@
 /* Ensure the root element spans the full viewport */
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -21,7 +23,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: start; /* Center content both horizontally and vertically */
-  min-height: calc(100vh - 4rem); /* Ensures content fills the viewport minus the menu */
+  min-height: calc(
+    100vh - 4rem
+  ); /* Ensures content fills the viewport minus the menu */
   text-align: center;
 }
 
