@@ -1,5 +1,6 @@
+import { useLocation } from 'react-router-dom';
 import Flex from './Flex.tsx';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 
 type LayoutProps = {
   title: string;
@@ -7,6 +8,12 @@ type LayoutProps = {
 }
 
 function Page(props: LayoutProps) {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <Flex direction={'column'}
           className="xl:w-3/4 pb-24 mt-20 gap-4" gap={4}>

@@ -48,7 +48,7 @@ export const projects: Project[] = [
 
       <P>
         This project was a culmination of my passion for both game development and computer graphics, and it was
-        recognized with the prestigious TUWIN Computer Graphics Hall of Fame first place award.
+        received first place in the TU Wien Computer Graphics Hall of Fame.
       </P>
 
       <H2>
@@ -138,7 +138,7 @@ export const projects: Project[] = [
 
       <P>At its core, Adam Light Optimization is designed to solve inverse rendering problems—where the goal is to determine the optimal lighting configuration needed to achieve desired illumination in specific areas of a 3D model. Users can select regions within the 3D environment that require specific lighting conditions, and the system automatically computes the optimal placement and intensity of lights to achieve the desired effect.</P>
 
-      <P>Key to the project's success is its ability to integrate seamlessly with various optimization algorithms, such as Adam, to ensure that the light placement process is both efficient and accurate. The system intelligently adds new lights into the scene, optimizing their positions and parameters to meet the scene's lighting requirements while avoiding common pitfalls like over-illumination or suboptimal light distribution.</P>
+      <P>Key to the project's success is its ability to integrate seamlessly with various optimization algorithms, such as ADAM, to ensure that the light placement process is both efficient and accurate. The system intelligently adds new lights into the scene, optimizing their positions and parameters to meet the scene's lighting requirements while avoiding common pitfalls like over-illumination or suboptimal light distribution.</P>
 
       <H2>
       Key Features:</H2>
@@ -159,7 +159,7 @@ export const projects: Project[] = [
 
       </UL>
 
-      <P>Adam Light Optimization represents a significant step forward in the field of computer graphics and rendering,
+      <P>ADAM Light Optimization represents a significant step forward in the field of computer graphics and rendering,
         showcasing my ability to work on cutting-edge technologies and contribute to advanced research in optimization
         techniques. This project not only demonstrates technical expertise in 3D rendering and optimization but also
         highlights my ability to innovate on top of existing research to solve real-world problems.</P>

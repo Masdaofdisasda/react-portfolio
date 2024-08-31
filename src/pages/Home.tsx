@@ -11,7 +11,7 @@ function Home() {
     ? 'relative text-5xl font-extrabold lg:text-6xl mb-12 mix-blend-difference invert'
         : 'text-5xl font-extrabold lg:text-6xl mb-12 mix-blend-difference invert backdrop-blur-sm backdrop-opacity-0';
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen bg-black">
       <FloatingModels />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-transparent">
