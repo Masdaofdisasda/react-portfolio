@@ -34,11 +34,6 @@ export function MenubarComponent() {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/resume" className={linkStyle}>
-          Resume
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
         <Link to="/contact" className={linkStyle}>
           Contact
         </Link>

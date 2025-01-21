@@ -25,9 +25,9 @@ function About() {
             My expertise lies in full-stack web development, and I am currently
             pursuing a degree in visual computing. Over the years, I have worked
             on various professional projects, including web applications and
-            digitalizing manual processes, data migration and UI libraries. One
+            digitalizing processes, data migration and UI libraries. One
             of my favorite personal projects is working on my game engine,
-            understanding and solving challenges in this performance critical,
+            understanding and solving challenges in this performance-critical,
             complex application.
           </p>
 
@@ -36,7 +36,7 @@ function About() {
           </h2>
           <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
             <li>I can really think well and get in the zone late at night.</li>
-            <li>I once had coffee from Java, and it was absurdly strong.</li>
+            <li>Coffee from Java is absurdly strong.</li>
             <li>I produce music and DJ as Wolum.</li>
           </ul>
         </Flex>
