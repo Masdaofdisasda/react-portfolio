@@ -1,10 +1,8 @@
-import { ReactNode } from 'react';
-
 export interface Project {
-  id: number;
+  slug: string;
   title: string;
-  description: ReactNode;
-  imageUrl?: string[];
+  markdown: string;
+  imageUrls?: string[];
   youtubeUrl?: string;
   githubUrl?: string;
 }
@@ -45,7 +43,7 @@ const UL: React.FC<React.HTMLProps<HTMLUListElement>> = ({
   );
 };
 
-export const projects: Project[] = [
+export const oldprojects: Project[] = [
   {
     id: 1,
     title: 'Greed',
@@ -118,7 +116,7 @@ export const projects: Project[] = [
         </P>
       </div>
     ),
-    imageUrl: [
+    imageUrls: [
       '/images/greed1.jpg',
       '/images/greed2.jpg',
       '/images/greed3.jpg',
@@ -187,7 +185,7 @@ export const projects: Project[] = [
         </P>
       </div>
     ),
-    imageUrl: [
+    imageUrls: [
       '/images/neckbreakVelocity1.png',
       '/images/neckbreakVelocity2.png',
     ],
@@ -261,7 +259,7 @@ export const projects: Project[] = [
         </P>
       </div>
     ),
-    imageUrl: [
+    imageUrls: [
       '../images/quake1.png',
       '../images/quake2.png',
       '../images/quake3.png',
@@ -320,7 +318,7 @@ export const projects: Project[] = [
         </P>
       </div>
     ),
-    imageUrl: ['/images/portfolio.png'],
+    imageUrls: ['/images/portfolio.png'],
     githubUrl: 'https://github.com/Masdaofdisasda/react-portfolio',
   },
   {
@@ -395,7 +393,7 @@ export const projects: Project[] = [
         </P>
       </div>
     ),
-    imageUrl: [
+    imageUrls: [
       '../images/ticketline1.png',
       '../images/ticketline2.png',
       '../images/ticketline3.png',
@@ -471,7 +469,7 @@ export const projects: Project[] = [
         </P>
       </div>
     ),
-    imageUrl: [
+    imageUrls: [
       '../images/raycast1.png',
       '../images/raycast2.png',
       '../images/raycast3.png',

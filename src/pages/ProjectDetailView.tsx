@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { projects } from '../assets/projects.tsx';
+import { oldprojects } from '../assets/oldprojects.tsx';
 import Page from '../components/Page.tsx';
 import {
   Carousel,
@@ -17,7 +17,7 @@ function ProjectDetail() {
   if (!id) {
     return <Page title={'Project not found'}></Page>;
   }
-  const project = projects.find((project) => project.id === parseInt(id));
+  const project = oldprojects.find((project) => project.id === parseInt(id));
 
   if (!project) {
     return <Page title={'Project not found'}></Page>;
@@ -32,11 +32,11 @@ function ProjectDetail() {
               {project.description}
             </p>
           </Flex>
-          {project.imageUrl && (
+          {project.imageUrls && (
             <Flex>
               <Carousel style={{ maxWidth: '700px' }}>
                 <CarouselContent className={'-ml-2 md:-ml-4'}>
-                  {project.imageUrl.map((imageUri, index) => (
+                  {project.imageUrls.map((imageUri, index) => (
                     <CarouselItem
                       key={index}
                       className="md:basis-1 lg:basis-7/12"

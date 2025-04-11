@@ -1,6 +1,5 @@
-// components/ProjectCard.tsx
 import { Link } from 'react-router-dom';
-import { Project } from '../assets/projects.tsx';
+import { Project } from '../assets/oldprojects.tsx';
 import {
   Card,
   CardContent,
@@ -16,7 +15,7 @@ interface ProjectCardProps {
   project: Project;
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project }: Readonly<ProjectCardProps>) {
   return (
     <Card
       style={{ maxWidth: '350px' }}
@@ -26,9 +25,9 @@ function ProjectCard({ project }: ProjectCardProps) {
         <CardTitle className={'text-left'}>{project.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        {project.imageUrl ? (
+        {project.imageUrls ? (
           <img
-            src={project.imageUrl[0]}
+            src={project.imageUrls[0]}
             alt={project.title}
             className="w-full h-36 object-cover rounded-lg"
           />
@@ -72,7 +71,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           )}
         </Flex>
         <Flex justify="flex-end" className="w-full md:w-auto">
-          <Link to={`/projects/${project.id}`}>
+          <Link to={`/projects/${project.slug}`}>
             <Button variant="outline" className="primary w-full md:w-auto">
               View More
             </Button>
