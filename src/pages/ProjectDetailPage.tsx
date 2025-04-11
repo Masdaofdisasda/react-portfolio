@@ -7,8 +7,7 @@ import { useParams } from 'react-router-dom';
 import { projects } from '../assets/projects.ts';
 import { Project } from '../assets/oldprojects.tsx';
 
-export function NewProjectDetailPage() {
-
+export function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
 
