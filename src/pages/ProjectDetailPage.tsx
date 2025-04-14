@@ -1,7 +1,7 @@
 import Page from '../components/Page.tsx';
 
 import Flex from '../components/Flex.tsx';
-import ProjectMarkdown from '../components/ProjectMarkdown.tsx';
+import MarkdownComponent from '../components/MarkdownComponent.tsx';
 import ProjectMedia from '../components/ProjectMedia.tsx';
 import { Link, useParams } from 'react-router-dom';
 import { projects } from '../assets/projects.ts';
@@ -29,7 +29,7 @@ export function ProjectDetailPage() {
           </Link>
 
           <ProjectLinks project={project} />
-          <ProjectMarkdown markdown={project.markdown} />
+          <MarkdownComponent markdown={project.markdown} />
           <ProjectMedia project={project as Project} />
         </Flex>
       </Flex>

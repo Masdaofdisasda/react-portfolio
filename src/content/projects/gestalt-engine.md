@@ -7,21 +7,29 @@ githubUrl: "https://github.com/Masdaofdisasda/GestaltEngine"                 # (
 deploymentUrl: "https://www.cg.tuwien.ac.at/sites/default/files/hall_of_fame/10042/executable2-gestalt.zip"
 summary: "A modern game engine."  # (Optional)
 ---
+**Gestalt Engine** is a fully custom game engine built from scratch in **C++ and Vulkan**, developed as a personal playground for experimenting with real-time graphics, engine architecture, and performance optimization. Designed around modern rendering techniques, it supports real-time physically based rendering, mesh/task shading, a custom **frame graph system**, and a simple editor for live scene interaction.
 
-**Gestalt Engine** is a short description of what this project is and what it’s about.
+The engine is capable of loading and rendering complex **glTF scenes**, including support for ray-traced shadows, image-based lighting, and volumetric fog. It also integrates audio, physics, and a **modular ECS**.
+
+This project was also used as the foundation for a real-time rendering demo created during a university course, which was awarded **second place** in the final showcase.
 
 ## Key Features
 
-- **Feature 1**: Describe the feature or tech used.
-- **Feature 2**: Something that stands out in your implementation.
-- **Feature 3**: Highlight performance, visuals, UX, or integration.
+- **Modern Vulkan Rendering Pipeline**: Task and mesh shaders, descriptor buffers, GPU culling (frustum + meshlet), ray-traced shadows, and HDR post-processing.
+- **Custom Frame Graph & ECS**: Designed a full render graph system with automatic resource synchronization, and implemented a fully custom entity-component system.
+- **Advanced Effects & Editor Integration**: Includes SSAO, LUT-based color grading, fog slope-based volumetric lighting, compute-based lighting passes, and a workable editor UI.
 
 ## Technologies Used
 
-- Language(s): C++, TypeScript, etc.
-- Libraries: OpenGL, Three.js, React, etc.
-- Tools: Blender, Unity, Maya, etc.
+- **Languages**: C++, GLSL, HLSL, Python
+- **Graphics APIs**: Vulkan 1.3
+- **Build Tools**: CMake, CPM
+- **Tools & Integrations**: Blender, ImGui, Jolt Physics, SDL2, VMA, Tracy, RenderDoc
 
 ## Development Highlights
 
-Explain any unique challenges or clever solutions. Describe what you learned or what was fun about this project.
+Gestalt Engine started as a way for me to explore **best practices in engine design**, graphics abstraction, and Vulkan’s lower-level control. Along the way, I:
+- Built a reusable C++ framework for cross-platform development with **clean module separation**
+- Learned to debug shader, buffers, textures, and resource synchronization issues using **RenderDoc** and **Nsight**
+- Refactored multiple subsystems with **testability, CI integration, and runtime debugging** in mind
+- Created a base for exploring **new rendering techniques**, like RestirGI and clustered lighting in future iterations

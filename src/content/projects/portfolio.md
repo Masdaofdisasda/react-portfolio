@@ -6,15 +6,18 @@ githubUrl: "https://github.com/Masdaofdisasda/react-portfolio"
 deploymentUrl: "https://www.davidkoeppl.com"
 ---
 
-This **Personal Portfolio Website** is a meticulously crafted platform designed to showcase my projects, skills, and experience as a software engineer. Built with modern web technologies, the site is a reflection of my technical proficiency and design sensibilities.
+This website is a personal space where I present my projects, document what I’ve learned, and experiment with web technologies. It’s designed to be lightweight, easy to maintain, and future-friendly — with plans to eventually support blog entries and small write-ups in Markdown.
 
-## Key Technologies and Features
+I built it using **React**, **TypeScript**, and **Vite**, styled with **Tailwind CSS** and **ShadCN UI** (built on **Radix UI**). The landing page also integrates **Three.js via React Three Fiber** to allow for 3D elements and interactive visuals.
 
-- **React and TypeScript**: The website is built using React, a powerful JavaScript library for building user interfaces, and TypeScript, which adds type safety and scalability to the codebase.
-- **Vite**: Utilized Vite as the build tool for its fast development environment and optimized production builds.
-- **ShadCN UI Library**: Enhanced the website's user interface with ShadCN, built on top of Radix and Tailwind CSS, for a consistent and customizable design system.
-- **3D Elements with Three.js Fiber**: Integrated 3D elements on the homepage using Three.js Fiber, adding a dynamic and interactive experience for visitors.
-- **ESLint and Prettier**: Implemented ESLint and Prettier for code formatting and maintaining a clean, consistent codebase.
-- **Static Website Hosting**: The site is hosted as a static website, ensuring fast load times and reliability. There’s no backend, keeping the architecture simple and focused on content delivery.
+One of the key architectural decisions was to keep content editable and consistent over time. I created a system that parses and renders Markdown content through reusable components, which makes it easy to maintain project pages and potentially publish blog posts — all without touching the codebase. This allows me to iterate quickly, keep formatting consistent, and avoid introducing bugs when editing.
 
-This portfolio website not only serves as a display of my work but also as a testament to my ability to build and deploy modern web applications. It’s a clean, responsive, and efficient site that highlights both my technical and creative skills.
+## Technologies & Features
+- **React + TypeScript**: Fast, type-safe frontend foundation
+- **Vite**: Quick build times and smooth dev experience
+- **ShadCN UI + Tailwind CSS**: Clean, accessible components with a flexible design system
+- **Markdown-Based Content System**: Easily editable content pages and future-ready for blog support
+- **React Three Fiber (Three.js)**: 3D elements for a creative and interactive landing experience
+- **Static Hosting**: Fully static frontend, deployable on any CDN
+
+This project taught me how to **structure frontend code**, manage content dynamically without a backend, and apply small design systems that feel consistent across multiple pages. It’s also my own testbed for experimenting with 3D integration, Markdown rendering, and future blog content.

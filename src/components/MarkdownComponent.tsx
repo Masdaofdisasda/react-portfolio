@@ -6,7 +6,7 @@ export type ProjectMarkdownProps = {
   markdown: string;
 }
 
-function ProjectMarkdown({ markdown }: Readonly<ProjectMarkdownProps>) {
+function MarkdownComponent({ markdown }: Readonly<ProjectMarkdownProps>) {
   return (
     <Flex className={'w-full'} justify={'center'}>
       <p className="leading-7 text-start" style={{ maxWidth: '700px' }}>
@@ -24,4 +24,4 @@ function ProjectMarkdown({ markdown }: Readonly<ProjectMarkdownProps>) {
   );
 }
 
-export default ProjectMarkdown;
+export default MarkdownComponent;

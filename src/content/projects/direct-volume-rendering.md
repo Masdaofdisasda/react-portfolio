@@ -6,19 +6,13 @@ imageUrls:
   - './images/raycast3.png'
 githubUrl: 'https://github.com/Masdaofdisasda/Vis1_Direct_Volume_Rendering_2022W'
 ---
+As part of a university course on visualization, I developed a **WebGL-based volume renderer** that runs interactively in the browser. The tool supports **First-Hit Compositing** and **Maximum Intensity Projection (MIP)** — two common techniques for visualizing 3D medical or scientific datasets.
 
-As part of a university visualization course, I developed a **Direct Volume Rendering** tool using **Three.js** and **WebGL**, aimed at enabling real-time 3D texture visualization directly in the browser. This project allows users to switch between two advanced rendering techniques—**First-Hit Compositing** and **Maximum Intensity Projection (MIP)**—providing an interactive and educational experience for exploring volumetric data.
+This was my first deep dive into **ray marching**, view-projection matrix math, and WebGL graphics beyond rasterization. I also built a basic UI for navigating the volume and helped integrate **D3-based histograms** for data analysis.
 
-## Key Features
+## What I Did
+- Implemented **ray marching shaders** in WebGL for both MIP and First-Hit Compositing
+- Built an interactive UI for **dataset exploration** and rendering mode switching
+- Collaborated on **data visualization** overlays (histograms) using D3.js
 
-- **First-Hit Compositing**: Implements a rendering technique that calculates the first intersection of the view ray with a high-density value in the volume, incorporating adjustable ISO values and physically-based lighting to enhance the realism of the rendered image.
-- **Maximum Intensity Projection (MIP)**: Offers an alternative rendering mode where the highest density value along the view ray is visualized, creating a clear and distinct representation of the most intense structures within the volume.
-- **Interactive Visualization**: Users can easily switch between the two rendering techniques, allowing them to explore and compare different visualizations of the same data.
-- **3D Texture Rendering**: Capable of rendering complex 3D textures directly in the browser, providing a smooth and responsive user experience.
-
-## Collaboration and Tool Integration
-
-- **Charts with D3.js**: A friend collaborated on the project by integrating D3.js to add charts, providing additional data visualization features that complement the volume rendering.
-- **WebGL and Three.js**: Leveraged WebGL for low-level graphics rendering and Three.js for higher-level abstractions, ensuring efficient and optimized rendering in the browser.
-
-This project demonstrates my ability to implement complex graphics techniques in a web environment, combining advanced rendering algorithms with user-friendly interactivity. It also showcases my collaboration skills, working alongside others to integrate additional features that enhance the overall functionality and utility of the tool.
+This project taught me the fundamentals of **volumetric rendering**, how ray traversal differs from raster pipelines, and gave me hands-on experience with **shader programming in a real-time browser environment**.
