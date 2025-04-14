@@ -1,7 +1,8 @@
 import ProjectCard from '../components/ProjectCard.tsx';
-import { projects } from '../assets/projects.tsx';
 import Flex from '../components/Flex.tsx';
 import Page from '../components/Page.tsx';
+import { projects } from '../assets/projects.ts';
+import { Project } from '../assets/project.types.tsx';
 
 function Projects() {
   return (
@@ -10,7 +11,7 @@ function Projects() {
         {projects
           .sort((a, b) => a.title.localeCompare(b.title))
           .map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard key={project.slug} project={project as Project} />
           ))}
       </Flex>
     </Page>
