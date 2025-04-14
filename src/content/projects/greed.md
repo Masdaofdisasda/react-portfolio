@@ -6,6 +6,7 @@ imageUrls:
   - "/images/greed3.jpg"
 youtubeUrl: "https://youtu.be/l_ucd9Kc4S4?si=CWjVK7NQRkRJ5tw3"
 githubUrl: "https://github.com/Masdaofdisasda/cgue22-greed"
+deploymentUrl: "https://github.com/Masdaofdisasda/cgue22-greed/releases/download/release/greed_1.0.0.zip"
 ---
 
 **Greed** is a dynamic and visually immersive 3D game that I developed using **C++ and OpenGL**, leveraging advanced graphics techniques to deliver a compelling and challenging experience.

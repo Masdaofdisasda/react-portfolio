@@ -3,6 +3,7 @@ title: "Neck Break Velocity"
 imageUrls:
   - "/images/neckbreakVelocity1.png"
   - "/images/neckbreakVelocity2.png"
+githubUrl: "https://github.com/Nicolas-Eder/multimedia-ue-23"
 ---
 
 **Neck Break Velocity** is an adrenaline-pumping, two-player split-screen racing game developed using **C#** and **Unity**. In this high-speed challenge, players race from one end of the track to the other, navigating through a chaotic environment filled with wandering NPCs that must be avoided at all costs. Colliding with these NPCs triggers a dramatic *ragdoll* effect, sending your character flying and adding an unpredictable twist to the gameplay.

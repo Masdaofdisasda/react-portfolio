@@ -4,6 +4,7 @@ imageUrls:                    # Paths to screenshots or previews
   - "/images/gestalt-1.png"
 youtubeUrl: "https://youtu.be/iXu6OPWCCoE?si=5wyJmrGU0yFYz6Wh"                # (Optional) YouTube embed URL
 githubUrl: "https://github.com/Masdaofdisasda/GestaltEngine"                 # (Optional) GitHub repo URL
+deploymentUrl: "https://www.cg.tuwien.ac.at/sites/default/files/hall_of_fame/10042/executable2-gestalt.zip"
 summary: "A modern game engine."  # (Optional)
 ---
 

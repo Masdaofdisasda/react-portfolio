@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Project } from '../assets/project.types.tsx';
 import {
   Card,
@@ -9,21 +9,40 @@ import {
 } from './ui/card.tsx';
 import { Button, buttonVariants } from './ui/button.tsx';
 import Flex from './Flex.tsx';
-import { FaGithub, FaYoutube } from 'react-icons/fa';
+import { FaEye, FaGithub } from 'react-icons/fa';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
 interface ProjectCardProps {
   project: Project;
 }
 
 function ProjectCard({ project }: Readonly<ProjectCardProps>) {
+  const navigate = useNavigate();
+
+  const handleCardClick = (e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (
+      target.closest('a') ||
+      target.closest('button')
+    ) {
+      return;
+    }
+    navigate(`/projects/${project.slug}`);
+  };
+
+  const hasDeployedUrl = Boolean(project.deploymentUrl);
+  const buttonLabel = hasDeployedUrl ? 'Try Now' : 'View More';
+
   return (
     <Card
-      style={{ maxWidth: '350px' }}
+      style={{ maxWidth: '350px', cursor: 'pointer' }}
       className="object-cover transition-transform duration-500 hover:scale-105"
+      onClick={handleCardClick}
     >
       <CardHeader>
         <CardTitle className={'text-left'}>{project.title}</CardTitle>
       </CardHeader>
+
       <CardContent>
         {project.imageUrls ? (
           <img
@@ -40,7 +59,29 @@ function ProjectCard({ project }: Readonly<ProjectCardProps>) {
       </CardContent>
 
       <CardFooter className="flex justify-between flex-wrap">
-        <Flex justify="flex-start" className="hidden md:flex space-x-1">
+        <Flex justify="flex-start" className="space-x-1">
+          {hasDeployedUrl ? (
+            <a
+              href={project.deploymentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="w-full md:w-auto flex items-center gap-x-2">
+                <FaArrowUpRightFromSquare className="w-4 h-4" />
+                {buttonLabel}
+              </Button>
+            </a>
+          ) : (
+            <Link to={`/projects/${project.slug}`}>
+              <Button className="w-full md:w-auto flex items-center gap-x-2">
+                <FaEye className="w-4 h-4" />
+                {buttonLabel}
+              </Button>
+            </Link>
+          )}
+        </Flex>
+
+        <Flex justify="flex-end" className="hidden md:flex">
           {project.githubUrl ? (
             <a
               href={project.githubUrl}
@@ -51,31 +92,10 @@ function ProjectCard({ project }: Readonly<ProjectCardProps>) {
               <FaGithub className="w-6 h-6 text-slate-800 hover:text-gray-600" />
             </a>
           ) : (
-            <Button disabled={true} variant="outline">
+            <Button disabled variant="outline">
               <FaGithub className="w-6 h-6 text-slate-800 hover:text-gray-600" />
             </Button>
           )}
-          {project.youtubeUrl ? (
-            <a
-              href={project.youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonVariants({ variant: 'outline' })}
-            >
-              <FaYoutube className="w-6 h-6 text-slate-800 hover:text-red-600" />
-            </a>
-          ) : (
-            <Button disabled={true} variant="outline">
-              <FaYoutube className="w-6 h-6 text-slate-800 hover:text-red-600" />
-            </Button>
-          )}
-        </Flex>
-        <Flex justify="flex-end" className="w-full md:w-auto">
-          <Link to={`/projects/${project.slug}`}>
-            <Button variant="outline" className="primary w-full md:w-auto">
-              View More
-            </Button>
-          </Link>
         </Flex>
       </CardFooter>
     </Card>
