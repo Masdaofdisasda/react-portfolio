@@ -4,7 +4,7 @@ imageUrls:
   - "/images/greed1.jpg"
   - "/images/greed2.jpg"
   - "/images/greed3.jpg"
-youtubeUrl: "https://www.youtube.com/embed/l_ucd9Kc4S4?si=O2QKUmwCvj-NEuSx"
+youtubeUrl: "https://youtu.be/l_ucd9Kc4S4?si=CWjVK7NQRkRJ5tw3"
 githubUrl: "https://github.com/Masdaofdisasda/cgue22-greed"
 ---
 

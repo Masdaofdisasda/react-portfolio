@@ -4,12 +4,11 @@ export const projectModules = import.meta.glob('../content/projects/*.md', {
   string,
   {
     attributes: {
-      id: number;
       title: string;
-      description?: string;
       imageUrls?: string[];
       youtubeUrl?: string;
       githubUrl?: string;
+      deploymentUrl?: string;
       slug?: string;
     };
     markdown: string;

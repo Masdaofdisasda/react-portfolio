@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Project } from '../assets/oldprojects.tsx';
+import { Project } from '../assets/project.types.tsx';
 import {
   Card,
   CardContent,

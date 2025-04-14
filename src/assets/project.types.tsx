@@ -5,4 +5,5 @@ export interface Project {
   imageUrls?: string[];
   youtubeUrl?: string;
   githubUrl?: string;
+  deploymentUrl?: string;
 }

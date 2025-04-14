@@ -1,15 +1,12 @@
 ---
-title: "Project Title"        # Display title
+title: "Flight Path Visualization"        # Display title
 imageUrls:                    # Paths to screenshots or previews
-  - "/images/example1.png"
-  - "/images/example2.png"
-youtubeUrl: ""                # (Optional) YouTube embed URL
-githubUrl: ""                 # (Optional) GitHub repo URL
-deploymentUrl: "" # (Optional) Deployment URL
-summary: "Short one-line description for preview cards."  # (Optional)
+  - "/images/flight-vis-2.png"
+githubUrl: "https://github.com/eliasfuericht/Vis2_project"  
+summary: "A visualization of flight data using edge-path bundling on a globe."
 ---
 
-**Project Title** is a short description of what this project is and what it’s about.
+**Flight Path Visualization** is a short description of what this project is and what it’s about.
 
 ## Key Features
 

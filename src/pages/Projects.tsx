@@ -2,7 +2,7 @@ import ProjectCard from '../components/ProjectCard.tsx';
 import Flex from '../components/Flex.tsx';
 import Page from '../components/Page.tsx';
 import { projects } from '../assets/projects.ts';
-import { Project } from '../assets/oldprojects.tsx';
+import { Project } from '../assets/project.types.tsx';
 
 function Projects() {
   console.log(projects);

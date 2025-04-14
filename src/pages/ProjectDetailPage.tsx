@@ -5,7 +5,8 @@ import ProjectMarkdown from '../components/ProjectMarkdown.tsx';
 import ProjectMedia from '../components/ProjectMedia.tsx';
 import { useParams } from 'react-router-dom';
 import { projects } from '../assets/projects.ts';
-import { Project } from '../assets/oldprojects.tsx';
+import { Project } from '../assets/project.types.tsx';
+import ProjectLinks from '../components/ProjectLinks.tsx';
 
 export function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -17,6 +18,7 @@ export function ProjectDetailPage() {
     <Page title={project.title}>
       <Flex justify="center">
         <Flex direction="column" className={'lg:w-3/4 xl:w-1/2 mx-8'} gap={3}>
+          <ProjectLinks project={project} />
           <ProjectMarkdown markdown={project.markdown} />
           <ProjectMedia project={project as Project} />
         </Flex>

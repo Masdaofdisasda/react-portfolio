@@ -1,15 +1,13 @@
 ---
-title: "Project Title"        # Display title
+title: "Gestalt Engine"        # Display title
 imageUrls:                    # Paths to screenshots or previews
-  - "/images/example1.png"
-  - "/images/example2.png"
-youtubeUrl: ""                # (Optional) YouTube embed URL
-githubUrl: ""                 # (Optional) GitHub repo URL
-deploymentUrl: "" # (Optional) Deployment URL
-summary: "Short one-line description for preview cards."  # (Optional)
+  - "/images/gestalt-1.png"
+youtubeUrl: "https://youtu.be/iXu6OPWCCoE?si=5wyJmrGU0yFYz6Wh"                # (Optional) YouTube embed URL
+githubUrl: "https://github.com/Masdaofdisasda/GestaltEngine"                 # (Optional) GitHub repo URL
+summary: "A modern game engine."  # (Optional)
 ---
 
-**Project Title** is a short description of what this project is and what it’s about.
+**Gestalt Engine** is a short description of what this project is and what it’s about.
 
 ## Key Features
 

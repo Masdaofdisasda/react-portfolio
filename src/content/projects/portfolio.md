@@ -3,6 +3,7 @@ title: "Portfolio Project"
 imageUrls:
   - "/images/portfolio.png"
 githubUrl: "https://github.com/Masdaofdisasda/react-portfolio"
+deploymentUrl: "https://www.davidkoeppl.com"
 ---
 
 This **Personal Portfolio Website** is a meticulously crafted platform designed to showcase my projects, skills, and experience as a software engineer. Built with modern web technologies, the site is a reflection of my technical proficiency and design sensibilities.

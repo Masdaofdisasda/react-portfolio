@@ -1,15 +1,15 @@
 ---
-title: "Project Title"        # Display title
+title: "Music Visualizer"        # Display title
 imageUrls:                    # Paths to screenshots or previews
-  - "/images/example1.png"
-  - "/images/example2.png"
+  - "/images/music-visualizer-1.png"
+  - "/images/music-visualizer-2.gif"
 youtubeUrl: ""                # (Optional) YouTube embed URL
-githubUrl: ""                 # (Optional) GitHub repo URL
-deploymentUrl: "" # (Optional) Deployment URL
-summary: "Short one-line description for preview cards."  # (Optional)
+githubUrl: "https://github.com/Masdaofdisasda/homographic-music-visualizer"                 # (Optional) GitHub repo URL
+deploymentUrl: "https://masdaofdisasda.github.io/homographic-music-visualizer/" # (Optional) Deployment URL
+summary: "Visualizes music using WebGL."  # (Optional)
 ---
 
-**Project Title** is a short description of what this project is and what it’s about.
+**Music Visualizer** is a short description of what this project is and what it’s about.
 
 ## Key Features
 

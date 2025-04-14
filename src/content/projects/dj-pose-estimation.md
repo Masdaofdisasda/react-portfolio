@@ -1,15 +1,13 @@
 ---
-title: "Project Title"        # Display title
-imageUrls:                    # Paths to screenshots or previews
-  - "/images/example1.png"
-  - "/images/example2.png"
-youtubeUrl: ""                # (Optional) YouTube embed URL
-githubUrl: ""                 # (Optional) GitHub repo URL
-deploymentUrl: "" # (Optional) Deployment URL
-summary: "Short one-line description for preview cards."  # (Optional)
+title: "DJ Pose Estimation" 
+imageUrls: 
+  - "/images/dj-pose-estimation1.png"
+githubUrl: "https://github.com/Masdaofdisasda/visual-analysis-project"
+deploymentUrl: "https://masdaofdisasda.github.io/visual-analysis-project/"
+summary: "Control a particle system with your body using pose estimation and WebGL."
 ---
 
-**Project Title** is a short description of what this project is and what it’s about.
+**DJ Pose Estimation** is a short description of what this project is and what it’s about.
 
 ## Key Features
 

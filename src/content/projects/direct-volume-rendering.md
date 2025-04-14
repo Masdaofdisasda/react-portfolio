@@ -4,7 +4,7 @@ imageUrls:
   - './images/raycast1.png'
   - './images/raycast2.png'
   - './images/raycast3.png'
-githubUrl: 'https://github.com/YourUser/Vis1_Direct_Volume_Rendering_2022W'
+githubUrl: 'https://github.com/Masdaofdisasda/Vis1_Direct_Volume_Rendering_2022W'
 ---
 
 As part of a university visualization course, I developed a **Direct Volume Rendering** tool using **Three.js** and **WebGL**, aimed at enabling real-time 3D texture visualization directly in the browser. This project allows users to switch between two advanced rendering techniques—**First-Hit Compositing** and **Maximum Intensity Projection (MIP)**—providing an interactive and educational experience for exploring volumetric data.
