@@ -5,14 +5,13 @@ import { projects } from '../assets/projects.ts';
 import { Project } from '../assets/project.types.tsx';
 
 function Projects() {
-  console.log(projects);
   return (
     <Page title="Projects">
       <Flex gap={4} className="mt-4" wrap="wrap" justify={'center'}>
         {projects
           .sort((a, b) => a.title.localeCompare(b.title))
           .map((project) => (
-            <ProjectCard key={project.id} project={project as Project} />
+            <ProjectCard key={project.slug} project={project as Project} />
           ))}
       </Flex>
     </Page>

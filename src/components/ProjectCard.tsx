@@ -19,7 +19,7 @@ interface ProjectCardProps {
 function ProjectCard({ project }: Readonly<ProjectCardProps>) {
   const navigate = useNavigate();
 
-  const handleCardClick = (e: MouseEvent) => {
+  const onCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
     if (
       target.closest('a') ||
@@ -37,8 +37,7 @@ function ProjectCard({ project }: Readonly<ProjectCardProps>) {
     <Card
       style={{ maxWidth: '350px', cursor: 'pointer' }}
       className="object-cover transition-transform duration-500 hover:scale-105"
-      onClick={handleCardClick}
-    >
+      onClick={onCardClick}>
       <CardHeader>
         <CardTitle className={'text-left'}>{project.title}</CardTitle>
       </CardHeader>
