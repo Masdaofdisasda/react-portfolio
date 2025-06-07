@@ -2,8 +2,8 @@
 title: "Flight Path Visualization"        # Display title
 imageUrls:                    # Paths to screenshots or previews
   - "/images/flight-vis-2.png"
-githubUrl: "https://github.com/eliasfuericht/Vis2_project"  
-deploymentUrl: "https://eliasfuericht.github.io/Vis2_project/"
+githubUrl: "https://github.com/eliasfuericht/Atmospheric-Edge-Path-Bundling"  
+deploymentUrl: "https://eliasfuericht.github.io/Atmospheric-Edge-Path-Bundling/"
 summary: "A visualization of flight data using edge-path bundling on a globe."
 ---
 
